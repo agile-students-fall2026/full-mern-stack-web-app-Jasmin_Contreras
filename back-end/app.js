@@ -78,5 +78,15 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Jasmin Contreras',
+    paragraphs: [
+      'Hi there, my name is Jasmin Contreras and outside of school I like to paint draw and collage/scrapbook.',
+      'I am also into playing video games (although I havent had time to play as much). I prefer story based games. My current favorite is The Last of Us.'
+    ],
+    image: 'https://media.licdn.com/dms/image/v2/D4E03AQHYao6LkPR0LQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697927224486?e=1793232000&v=beta&t=W6zuMVnHJ7AQ5c1iP78EFbGwOrYHmpsmg3ETPTMX-Qk'
+  })
+})
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
